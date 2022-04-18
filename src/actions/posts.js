@@ -19,11 +19,54 @@ function addQuestion(question) {
   };
 }
 
-function addAnswer({ authedUser, qid, answer }) {
-  return {
-    type: ADD_ANSWER,
-    authedUser,
-    qid,
-    answer
-  };
+function addAnswer({ qid, answer, authedUser }) {
+	return {
+		type: ADD_ANSWER,
+		answerInfo: {
+			qid,
+			answer,
+			authedUser
+		}
+	};
+}
+
+//async action creators
+export function handleAddQuestion(optionOne, optionTwo) {
+	return (dispatch, getState) => {
+		const { authedUser } = getState();
+
+		dispatch(showLoading());
+
+		return saveQuestion({
+			optionOneText: optionOne,
+			optionTwoText: optionTwo,
+			author: authedUser
+		})
+			.then((question) => dispatch(addQuestion(question)))
+			.then(() => dispatch(hideLoading()));
+	};
+}
+
+export function handleAddAnswer(qid, answer) {
+	return (dispatch, getState) => {
+		const { authedUser } = getState();
+
+		dispatch(showLoading());
+
+		return saveQuestionAnswer({
+			qid,
+			answer,
+			authedUser
+		})
+			.then(() =>
+				dispatch(
+					addAnswer({
+						qid,
+						answer,
+						authedUser
+					})
+				)
+			)
+			.then(() => dispatch(hideLoading()));
+	};
 }

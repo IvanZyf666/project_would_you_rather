@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import { setAuthedUser } from '../actions/authedUser';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
@@ -28,16 +28,13 @@ class LoginPage extends Component {
   render() {
     const { userNames } = this.props;
     const { errorMsg } = this.state;
-    console.log(userNames);
     return (
-      <Row className="d-flex align-items-center justify-content-center vh-100">
+      <Row className="d-flex align-items-center justify-content-center vh-100" style={{marginTop:'-120px'}}>
         <Col xs={12} md={4}>
-          <Card bg="light" className="text-center">
-            <Card.Header>Login</Card.Header>
+          <Card bg="light" className="text-center border-success">
+            <Card.Header style={{ borderBlockColor: 'green' }}>Login</Card.Header>
             <Card.Body>
-
               <Form onSubmit={this.handleSubmit}>
-
                 <Form.Group className="mb-3">
                   <Form.Label>Username</Form.Label>
                   {errorMsg !== '' ? (
@@ -54,7 +51,7 @@ class LoginPage extends Component {
                     ))}
                   </Form.Control>
                 </Form.Group>
-                <Button type="submit" variant="outline-dark">
+                <Button type="submit" variant="outline-success">
                   Login
                 </Button>
               </Form>

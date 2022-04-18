@@ -6,9 +6,11 @@ import PageNotFound from './components/PageNotFound';
 import HomePage from './components/HomePage';
 import AwardPage from './components/AwardPage';
 import QuestionPage from './components/QuestionPage';
+import NewQuestion from './components/NewQuestion';
 import { Routes, Route, Switch } from 'react-router-dom';
 import authedUser from './reducers/authedUser';
 import NavBar from './components/NavBar';
+import { Spinner } from 'react-bootstrap';
 import './App.css';
 
 class App extends Component {
@@ -16,23 +18,45 @@ class App extends Component {
     this.props.dispatch(handleInitialData());
   }
   render() {
-    const { authedUser } = this.props;
-    return (
-      <Fragment>
-        {authedUser === null ?
-          <LoginPage />
-          :
-          <div>
-            <NavBar />
-            <Routes>
-              <Route path='/' exact element={<HomePage />} />
-              <Route path='/AwardBoard' exact element={<AwardPage />} />
-              <Route path='*' element={<PageNotFound />} />
-              <Route path="/questions/:id" element={<QuestionPage />} />
-            </Routes>
-          </div >}
-      </Fragment>
-    );
+    const { authedUser, loadingBar } = this.props;
+    console.log(loadingBar)
+
+    if (loadingBar.default === undefined || loadingBar.default === 1) {
+      //loading
+      return (
+        <div className="loadingPage">
+          <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      );
+    } else {
+      return (
+        <Fragment>
+          {authedUser === null ?
+            <LoginPage />
+            :
+            <div>
+              <NavBar />
+              <Routes>
+                <Route path='/' exact element={<HomePage />} />
+                <Route path='/AwardBoard' exact element={<AwardPage />} />
+                <Route path='/NewQuestion' exact element={<NewQuestion />} />
+                <Route path='*' element={<PageNotFound />} />
+                <Route path="/questions/:id" element={<QuestionPage />} />
+              </Routes>
+            </div >}
+        </Fragment>
+      );
+    }
   }
 }
 

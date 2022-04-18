@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 function PageNotFound() {
   return (
-    <div>
-      <h1 className='page-not-found'>Error 404: Page Not Found!</h1>
-    </div>
+    <Fragment>
+			<h1 className="text-center mt-4">Page Not Found</h1>
+			<h3 className="text-center">
+				<Link to="/" style={{color: 'green'}}>Return to Home Page</Link>
+			</h3>
+		</Fragment>
   )
 }
 export default PageNotFound 

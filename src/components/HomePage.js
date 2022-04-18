@@ -13,10 +13,11 @@ class HomePage extends Component {
 			height: '100%',
 			minHeight: '100vh',
       margin: '23px',
+      width: ' 50%',
 		}
     
     return (
-      <div className="homepage-tabs" style={style}>
+      <div className="homepage-tabs m-auto mt-4" style={style}>
         <Tabs
           defaultActiveKey="unanswered"
           transition={false}

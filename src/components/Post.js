@@ -12,7 +12,7 @@ class Post extends Component {
 		const { isAnswered } = this.props;
 		return (
 			<Row className="justify-content-center">
-				<Col md={6}>
+				<Col md={8}>
 					<Card bg='light' className='mb-2 border border-success' style={{ borderRadius: '8px' }}>
 						<Card.Header style={{ borderBlockColor: 'green' }}>{name} asks</Card.Header>
 						<Card.Body>
@@ -24,7 +24,6 @@ class Post extends Component {
 								<Col className='justify-content-center'>
 									<Card.Title>Would you rather</Card.Title>
 									<Card.Text className='mb-0 me-5 mt-2' style={{ fontSize: '20px', textAlign: 'center' }}>{optionOne.text}</Card.Text>
-									{/* <Button className='mb-2 ms-5' variant='outline-success'></Button> */}
 									<Card.Text className='mb-0 me-5' style={{ textAlign: 'center' }}>or...</Card.Text>
 									<Link to={`/questions/${id}`}>
 										{isAnswered ? (

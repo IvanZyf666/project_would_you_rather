@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Post from './Post';
 
 class PostBoard extends Component {
@@ -6,14 +7,19 @@ class PostBoard extends Component {
 		const { questions, isAnswered } = this.props;
 		return (
 			<div>
+				{console.log(questions.length)}
 				{questions ? (
 					questions.map((question) =>
 						<Post key={question.id} id={question.id} isAnswered={isAnswered} />
-						// <PostPage key={question.id} id={question.id} isAnswered={isAnswered} />
 					)
 				) : (
 					<p> Empty Question List </p>
 				)}
+				{!isAnswered && !questions.length &&
+					<h4 style={{ textAlign: 'center', color: 'gray' }}>
+						No More Questions! <Link to='/NewQuestion' style={{color:'green'}}>Make a new one!</Link>
+					</h4>
+				}
 			</div>
 		)
 	}

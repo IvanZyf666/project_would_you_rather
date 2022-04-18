@@ -16,7 +16,7 @@ function NavBar(props) {
     };
 
     return (
-        <Navbar expand="lg" bg="light" variant="light" className="m-4 border border-success" style={{borderRadius:'8px'}}>
+        <Navbar expand="lg" bg="light" variant="light" className="m-4 mb-0 border border-success" style={{ borderRadius: '8px' }}>
             <Navbar.Brand as={Link} to="/" className='ms-4 mt-1'>
                 <h2>
                     <small>Would You Rather?</small>
@@ -39,13 +39,15 @@ function NavBar(props) {
             <div className="justify-content-end">
                 <Navbar.Text>{user.name}</Navbar.Text>
                 <Avatar avatarURL={user.avatarURL} size="50" className="mx-3" />
-                <Button
-                    variant="outline-success"
-                    onClick={handleLogout}
-                    className="mt-3 mt-lg-0 me-4"
-                >
-                    Logout
-                </Button>
+                <Link to="/">
+                    <Button
+                        variant="outline-success"
+                        onClick={handleLogout}
+                        className="mt-3 mt-lg-0 me-4"
+                    >
+                        Logout
+                    </Button>
+                </Link>
             </div>
         </Navbar>
     );
