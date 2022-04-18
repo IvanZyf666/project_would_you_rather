@@ -1,6 +1,6 @@
 # Would You Rather Project
 A website with React, Redux and Bootstrap UI library.
-https://myreads-ivan-bookshelf.netlify.app/
+https://would-you-rather-ivan.netlify.app
 <!-- ![alt text](https://github.com/IvanZyf666/myreads-ivan-bookshelf/blob/master/public/bookshelf.png) -->
 
 This is the final assessment project for Udacity's React & Redux course.
