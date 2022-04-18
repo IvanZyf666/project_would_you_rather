@@ -17,7 +17,7 @@ class HomePage extends Component {
 		}
     
     return (
-      <div className="homepage-tabs m-auto mt-4" style={style}>
+      <div className="homepage-tabs m-auto mt-4 mb-4" style={style}>
         <Tabs
           defaultActiveKey="unanswered"
           transition={false}
