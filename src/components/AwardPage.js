@@ -28,7 +28,6 @@ class AwardPage extends Component {
 }
 
 function mapStateToProps({ users }) {
-  console.log(users);
 
   const sortedUserIDs = Object.keys(users).sort((a, b) => {
     const aAnswerNumber = Object.keys(users[a].answers).length;

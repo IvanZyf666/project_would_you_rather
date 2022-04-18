@@ -7,7 +7,6 @@ class PostBoard extends Component {
 		const { questions, isAnswered } = this.props;
 		return (
 			<div>
-				{console.log(questions.length)}
 				{questions ? (
 					questions.map((question) =>
 						<Post key={question.id} id={question.id} isAnswered={isAnswered} />

@@ -19,7 +19,6 @@ class App extends Component {
   }
   render() {
     const { authedUser, loadingBar } = this.props;
-    console.log(loadingBar)
 
     if (loadingBar.default === undefined || loadingBar.default === 1) {
       //loading
