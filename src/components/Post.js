@@ -3,17 +3,19 @@ import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Avatar from './Avatar';
 import { connect } from 'react-redux';
-import { Container, Row, Col, Button, ProgressBar } from 'react-bootstrap';
-import Percentage from './Percentage';
+import { Row, Col, Button } from 'react-bootstrap';
+
 class Post extends Component {
 	render() {
 		const { id, timestamp, optionOne, optionTwo } = this.props.question;
 		const { name, avatarURL } = this.props.author;
 		const { isAnswered } = this.props;
+		
+		
 		return (
 			<Row className="justify-content-center">
 				<Col md={8}>
-					<Card bg='light' className='mb-2 border border-success' style={{ borderRadius: '8px' }}>
+					<Card bg='light' className='mb-3 border border-success' style={{ borderRadius: '8px' }}>
 						<Card.Header style={{ borderBlockColor: 'green' }}>{name} asks</Card.Header>
 						<Card.Body>
 							<Row>
@@ -27,9 +29,9 @@ class Post extends Component {
 									<Card.Text className='mb-0 me-5' style={{ textAlign: 'center' }}>or...</Card.Text>
 									<Link to={`/questions/${id}`}>
 										{isAnswered ? (
-											<Button className='w-75 ms-5 mt-2' variant='outline-success'> View Results → </Button>
+											<Button className='w-75 ms-3 mt-2' variant='outline-success'> View Results → </Button>
 										) : (
-											<Button className='w-75 ms-5 mt-2' variant='outline-success'> Answer Poll → </Button>
+											<Button className='w-75 ms-3 mt-2' variant='outline-success'> Answer Poll → </Button>
 										)}
 									</Link>
 
@@ -37,7 +39,6 @@ class Post extends Component {
 							</Row>
 						</Card.Body>
 						<Card.Footer>
-							{/* <small className="text-muted">{timestamp}</small> */}
 						</Card.Footer>
 					</Card>
 				</Col>
