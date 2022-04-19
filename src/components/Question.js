@@ -38,7 +38,7 @@ class Question extends Component {
 									<Avatar avatarURL={avatarURL} size="140" />
 								</Col>
 								<Col xs={1} className='divider'></Col>
-								<Col>
+								<Col xs={7} className='' >
 									{isAnswered ? (
 										<div>
 											<h5 className='mb-1'>Results:</h5>
@@ -47,11 +47,11 @@ class Question extends Component {
 											<Percentage option={optionTwo} totalVotes={totalVotes} />
 										</div>
 									) : (
-										<div>
+										<div className=''>
 											<h5>Would you rather ?</h5>
 											<Button className='mb-2 ms-5' variant='outline-success' onClick={() => handlePoll('optionOne')}>{optionOne.text}</Button>
 											<br />
-											<Button className='ms-5' variant='outline-success' onClick={() => handlePoll('optionTwo')}>{optionTwo.text}</Button>
+											<Button className='m-auto ms-5' variant='outline-success' onClick={() => handlePoll('optionTwo')}>{optionTwo.text}</Button>
 										</div>
 									)}
 								</Col>

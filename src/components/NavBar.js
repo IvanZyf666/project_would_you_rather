@@ -28,10 +28,10 @@ function NavBar(props) {
                     <Nav.Link as={NavLink} to="/">
                         Home
                     </Nav.Link>
-                    <Nav.Link as={NavLink} to="/NewQuestion">
+                    <Nav.Link as={NavLink} to="/add">
                         New Question
                     </Nav.Link>
-                    <Nav.Link as={NavLink} to="/AwardBoard">
+                    <Nav.Link as={NavLink} to="/leaderboard">
                         Leaderboard
                     </Nav.Link>
                 </Nav>

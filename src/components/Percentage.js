@@ -12,7 +12,7 @@ class Percentage extends Component {
     const progressBarStyle = {
       // borderRadius: '10px',
       backgroundColor: '#f5f5f5',
-      width: '80%',
+      width: '90%',
       margin: 'auto',
       height: '22px',
       borderRadius: '10px',
@@ -26,14 +26,12 @@ class Percentage extends Component {
     return (
       <Container>
         <Row className='border border-success m-2' style={cardStyle}>
-          <Row className='justify-content-center mt-2'>
+          <Row className='justify-content-center m-0 mt-2 mb-1'>
             {option.text}
           </Row>
           <div className='justify-content-center'>
             <ProgressBar now={optionPercent} variant='success' animated className='border' style={progressBarStyle} />
           </div>
-
-
           <Row className='justify-content-center'>
             {optionVotes}/{totalVotes}
           </Row>

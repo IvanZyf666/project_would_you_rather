@@ -71,6 +71,7 @@ class NewQuestion extends Component {
 											name="optionOne"
 											value={optionOne}
 											onChange={this.handleInputChange}
+											maxLength="28"
 										/>
 									</Form.Group>
 									<h3>
@@ -83,6 +84,7 @@ class NewQuestion extends Component {
 											name="optionTwo"
 											value={optionTwo}
 											onChange={this.handleInputChange}
+											maxLength="28"
 										/>
 									</Form.Group>
 									<Button

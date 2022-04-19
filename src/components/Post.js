@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Avatar from './Avatar';
 import { connect } from 'react-redux';
 import { Row, Col, Button } from 'react-bootstrap';
+import PropTypes from 'prop-types'
 
 class Post extends Component {
 	render() {
@@ -23,7 +24,7 @@ class Post extends Component {
 									<Avatar avatarURL={avatarURL} size="140" />
 								</Col>
 								<Col xs={1} className='divider'></Col>
-								<Col className='justify-content-center'>
+								<Col xs={8} className='justify-content-center'>
 									<Card.Title>Would you rather</Card.Title>
 									<Card.Text className='mb-0 me-5 mt-2' style={{ fontSize: '20px', textAlign: 'center' }}>{optionOne.text}</Card.Text>
 									<Card.Text className='mb-0 me-5' style={{ textAlign: 'center' }}>or...</Card.Text>
@@ -34,7 +35,6 @@ class Post extends Component {
 											<Button className='w-75 ms-3 mt-2' variant='outline-success'> Answer Poll → </Button>
 										)}
 									</Link>
-
 								</Col>
 							</Row>
 						</Card.Body>
@@ -46,6 +46,12 @@ class Post extends Component {
 		)
 	}
 }
+
+Post.propTypes = {
+  question: PropTypes.object,
+	author: PropTypes.object,
+};
+
 function mapStateToProps({ questions, users }, { id }) {
 	const question = questions[id];
 

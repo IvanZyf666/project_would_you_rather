@@ -24,7 +24,7 @@ class App extends Component {
       //loading
       return (
         <div className="loadingPage">
-          <div class="loading">
+          <div className="loading">
             <span></span>
             <span></span>
             <span></span>
@@ -47,10 +47,10 @@ class App extends Component {
               <NavBar />
               <Routes>
                 <Route path='/' exact element={<HomePage />} />
-                <Route path='/AwardBoard' exact element={<AwardPage />} />
-                <Route path='/NewQuestion' exact element={<NewQuestion />} />
-                <Route path='*' element={<PageNotFound />} />
+                <Route path='/leaderboard' exact element={<AwardPage />} />
+                <Route path='/add' exact element={<NewQuestion />} />
                 <Route path="/questions/:id" element={<QuestionPage />} />
+                <Route path='*' element={<PageNotFound />} />
               </Routes>
             </div >}
         </Fragment>
