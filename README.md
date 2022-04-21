@@ -1,8 +1,8 @@
 # Would You Rather Project
 
-> A website with React, Redux and Bootstrap UI library.
+> A would you rather website developed using React, Redux and Bootstrap UI library.
 
-[![Build Status](https://img.shields.io/badge/build-passing-green)](https://would-you-rather-ivan.netlify.app) ![language](https://img.shields.io/badge/language-react-orange.svg)
+[![Build Status](https://img.shields.io/badge/build-passing-green)](https://would-you-rather-ivan.netlify.app) ![language](https://img.shields.io/badge/framework-react-orange.svg)
 
 https://would-you-rather-ivan.netlify.app
 <!-- ![alt text](https://github.com/IvanZyf666/myreads-ivan-bookshelf/blob/master/public/bookshelf.png) -->
