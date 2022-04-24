@@ -110,3 +110,14 @@
       transform: scale(1);
   }
 }
+
+@font-face {
+  font-family: 'title-font';
+  src: url('./utils/MorningRainbow-WyL8n.ttf');
+}
+
+.title{
+  font-family: 'title-font';
+  margin-top: 10px;
+  margin-left: 10px;
+}

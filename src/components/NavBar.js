@@ -18,8 +18,8 @@ function NavBar(props) {
     return (
         <Navbar expand="lg" bg="light" variant="light" className="m-4 mb-0 border border-success" style={{ borderRadius: '8px' }}>
             <Navbar.Brand as={Link} to="/" className='ms-4 mt-1'>
-                <h2>
-                    <small>Would You Rather?</small>
+                <h2 className='title'>
+                    Would You Rather?
                 </h2>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
