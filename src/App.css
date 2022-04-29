@@ -1,3 +1,8 @@
+/* background */
+body {
+  background: linear-gradient(200deg, #e3c5eb, #a9c1ed);
+}
+
 .nav-tabs .nav-link{
   color: green
 
@@ -113,7 +118,7 @@
 
 @font-face {
   font-family: 'title-font';
-  src: url('./utils/MorningRainbow-WyL8n.ttf');
+  src: url('./utils/JapaneseRobot-0WWdX.ttf');
 }
 
 .title{
@@ -121,3 +126,4 @@
   margin-top: 10px;
   margin-left: 10px;
 }
+

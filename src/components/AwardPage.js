@@ -12,6 +12,7 @@ class AwardPage extends Component {
       width: '46%',
       height: '100%',
       margin: '24px',
+      backgroundColor: '#f5f5f5',
     }
     const { sortedUserIDs } = this.props;
     return (

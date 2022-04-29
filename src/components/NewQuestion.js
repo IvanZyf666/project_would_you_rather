@@ -49,57 +49,59 @@ class NewQuestion extends Component {
 			borderRadius: '8px',
 			textAlign: 'center',
 			width: '46%',
-			height: '100%',
 			margin: 'auto',
 			marginTop: '24px',
+			backgroundColor: '#f5f5f5',
 		}
 
 		return (
-			<div style={style}>
-				<Row className='ms-5 me-5 mt-2 mb-1 border-bottom border-success' variant='' style={{ textAlign: 'start' }}>
-					<h3 className='m-2'>Would You Rather...</h3>
-				</Row>
-				<Row className="justify-content-center">
-					<Col md={7}>
-						<Card bg="light" className="m-4 text-center border-success">
-							<Card.Body>
-								<Form onSubmit={this.handleSubmit}>
-									<Form.Group controlId="optionOne">
-										<Form.Label>Choice One</Form.Label>
-										<Form.Control
-											type="text"
-											name="optionOne"
-											value={optionOne}
-											onChange={this.handleInputChange}
-											maxLength="28"
-										/>
-									</Form.Group>
-									<h3>
-										<small>OR</small>
-									</h3>
-									<Form.Group controlId="optionTwo">
-										<Form.Label>Choice Two</Form.Label>
-										<Form.Control
-											type="text"
-											name="optionTwo"
-											value={optionTwo}
-											onChange={this.handleInputChange}
-											maxLength="28"
-										/>
-									</Form.Group>
-									<Button
-										className="mt-3"
-										type="submit"
-										variant="outline-success"
-										disabled={optionOne === '' || optionTwo === ''}
-									>
-										Submit
-									</Button>
-								</Form>
-							</Card.Body>
-						</Card>
-					</Col>
-				</Row>
+			<div style={{minHeight: '100vh'}}>
+				<div style={style}>
+					<Row className='ms-5 me-5 mt-2 mb-1 border-bottom border-success' variant='' style={{ textAlign: 'start' }}>
+						<h3 className='m-2'>Would You Rather...</h3>
+					</Row>
+					<Row className="justify-content-center">
+						<Col md={7}>
+							<Card bg="light" className="m-4 text-center border-success">
+								<Card.Body>
+									<Form onSubmit={this.handleSubmit}>
+										<Form.Group controlId="optionOne">
+											<Form.Label>Choice One</Form.Label>
+											<Form.Control
+												type="text"
+												name="optionOne"
+												value={optionOne}
+												onChange={this.handleInputChange}
+												maxLength="28"
+											/>
+										</Form.Group>
+										<h3>
+											<small>OR</small>
+										</h3>
+										<Form.Group controlId="optionTwo">
+											<Form.Label>Choice Two</Form.Label>
+											<Form.Control
+												type="text"
+												name="optionTwo"
+												value={optionTwo}
+												onChange={this.handleInputChange}
+												maxLength="28"
+											/>
+										</Form.Group>
+										<Button
+											className="mt-3"
+											type="submit"
+											variant="outline-success"
+											disabled={optionOne === '' || optionTwo === ''}
+										>
+											Submit
+										</Button>
+									</Form>
+								</Card.Body>
+							</Card>
+						</Col>
+					</Row>
+				</div>
 			</div>
 		);
 	}
