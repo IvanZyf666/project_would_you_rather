@@ -21,7 +21,7 @@ class Question extends Component {
 		}
 
 		return (
-			<Row className="justify-content-center mt-4">
+			<Row className="justify-content-center mt-4 vh-100">
 				<Col md={5}>
 					<Card bg='light' className='mb-2 border border-success' style={{ borderRadius: '8px' }}>
 						<Card.Header style={{ borderBlockColor: 'green' }}>

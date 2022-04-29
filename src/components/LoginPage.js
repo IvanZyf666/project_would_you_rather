@@ -16,10 +16,10 @@ class LoginPage extends Component {
     const userID = this.userID.value;
     const { dispatch } = this.props;
     e.preventDefault();
-    if(userID!==''){
+    if (userID !== '') {
       dispatch(setAuthedUser(userID));
     }
-    else{
+    else {
       this.setState({ errorMsg: 'Please choose a user' });
     }
   }
@@ -29,8 +29,8 @@ class LoginPage extends Component {
     const { userNames } = this.props;
     const { errorMsg } = this.state;
     return (
-      <Row className="d-flex align-items-center justify-content-center vh-100" style={{marginTop:'-120px'}}>
-        <Col xs={12} md={4}>
+      <Row className="d-flex align-items-center justify-content-center vh-100">
+        <Col xs={12} md={4} style={{ marginBottom: '10%' }}>
           <Card bg="light" className="text-center border-success">
             <Card.Header style={{ borderBlockColor: 'green' }}>Login</Card.Header>
             <Card.Body>
