@@ -12,7 +12,7 @@ class PostBoard extends Component {
 				))}
 				{!isAnswered && !questions.length &&
 					<h4 style={{ textAlign: 'center', color: 'gray' }}>
-						No More Questions! <Link to='/NewQuestion' style={{ color: 'green' }}>Make a new one!</Link>
+						No More Questions! <Link to='/add' style={{ color: 'green' }}>Make a new one!</Link>
 					</h4>
 				}
 			</div>
