@@ -21,7 +21,7 @@ class Post extends Component {
 						<Card.Body>
 							<Row>
 								<Col xs={3}>
-									<Avatar avatarURL={avatarURL} size="140" />
+									<Avatar avatarURL={avatarURL} size="150" />
 								</Col>
 								<Col xs={1} className='divider'></Col>
 								<Col xs={8} className='justify-content-center'>

@@ -13,7 +13,7 @@ class HomePage extends Component {
 			height: '100%',
 			minHeight: '100vh',
       margin: '23px',
-      width: ' 50%',
+      width: ' 56%',
       backgroundColor: '#f5f5f5',
 		}
     
